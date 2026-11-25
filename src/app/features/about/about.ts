@@ -21,7 +21,9 @@ export class About {
     location: 'Kaiserslautern, Germany',
     education: 'M.Sc. Computer Science',
     university: 'RPTU Kaiserslautern',
-    experience: 'Enterprise Software Development',
+    // university: 'RPTU Kaiserslautern',
+    // experience: 'Enterprise Software Development',
+    experience: 'Pursuing M.Sc in Computer Science',
     technologies: ['Java', 'Spring Boot', 'Angular', 'SAP', 'Python']
   };
 }

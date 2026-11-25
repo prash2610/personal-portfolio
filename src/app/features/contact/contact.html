@@ -1,0 +1,70 @@
+
+<section class="contact-section section" id="contact">
+  <div class="container">
+
+    <div class="contact-content">
+
+      <span class="section-eyebrow">05 / GET IN TOUCH</span>
+
+      <h2>
+        Let's build
+        <span>something meaningful.</span>
+      </h2>
+
+      <p class="contact-description">
+        I'm always interested in connecting with people,
+        discussing technology, and exploring opportunities
+        to build impactful software.
+      </p>
+
+      <a
+        class="contact-email"
+        [href]="'mailto:' + email">
+        {{ email }}
+        <span>↗</span>
+      </a>
+
+      <div class="contact-links">
+
+        <a
+          [href]="linkedinUrl"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn <span>↗</span>
+        </a>
+
+        <a
+          [href]="githubUrl"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub <span>↗</span>
+        </a>
+
+        <a
+          [href]="resumePath"
+          download="Prashant_Pote_Resume.pdf">
+          Resume <span>↓</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <footer class="portfolio-footer">
+
+      <a class="footer-brand" href="#home">
+        PP<span>.</span>
+      </a>
+
+      <p>
+        Designed &amp; built by Prashant Pote
+      </p>
+
+      <span class="footer-copyright">
+        © {{ currentYear }} ALL RIGHTS RESERVED
+      </span>
+
+    </footer>
+
+  </div>
+</section>
