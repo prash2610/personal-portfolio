@@ -34,6 +34,8 @@ export class Navbar {
   @HostListener('window:scroll')
   onWindowScroll(): void {
 
+    this.isMenuOpen.set(false);
+
     const scrollTop =
       window.scrollY || document.documentElement.scrollTop;
 
