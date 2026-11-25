@@ -1,0 +1,138 @@
+
+<section class="about-section section" id="about">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-eyebrow">01 / ABOUT ME</span>
+      <h2>
+        A little about
+        <span>what I do.</span>
+      </h2>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- About content -->
+      <div class="about-content">
+        <p class="about-intro">
+          I'm a software engineer who enjoys building practical
+          solutions and understanding how technology works
+          behind the scenes.
+        </p>
+
+        <p class="about-description">
+          My professional experience at Volkswagen Group Digital
+          Solutions involved enterprise software development,
+          SAP technologies, application maintenance and
+          troubleshooting. I've also explored application
+          development using Java, Spring Boot, Angular and Python.
+        </p>
+
+        <p class="about-description">
+          Currently, I'm pursuing an M.Sc. in Computer Science
+          at RPTU Kaiserslautern. I'm interested in expanding
+          my knowledge of software engineering and building
+          reliable, scalable applications.
+        </p>
+
+        <div class="about-facts">
+          <div class="fact-item">
+            <span class="fact-label">CURRENTLY</span>
+            <strong>M.Sc. Computer Science</strong>
+          </div>
+
+          <div class="fact-item">
+            <span class="fact-label">BASED IN</span>
+            <strong>Kaiserslautern, Germany</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Developer ID -->
+      <div class="id-card-area">
+
+        <button
+          class="id-card"
+          [class.is-flipped]="isFlipped()"
+          (click)="toggleCard()"
+          [attr.aria-pressed]="isFlipped()"
+          [attr.aria-label]="isFlipped()
+            ? 'Show front of developer ID card'
+            : 'Show back of developer ID card'">
+
+          <div class="id-card-inner">
+
+            <!-- Front -->
+            <div class="id-card-face id-card-front">
+
+              <div class="id-card-header">
+                <span>DEVELOPER IDENTITY</span>
+                <span>PROFILE / 01</span>
+              </div>
+
+              <div class="id-card-main">
+                <div class="id-avatar">
+                  PP
+                </div>
+
+                <div class="id-identity">
+                  <span class="id-label">SOFTWARE ENGINEER</span>
+                  <h3>Prashant<br />Pote</h3>
+                  <p>{{ profile.location }}</p>
+                </div>
+              </div>
+
+              <div class="id-card-footer">
+                <div>
+                  <span class="id-label">EDUCATION</span>
+                  <strong>{{ profile.education }}</strong>
+                </div>
+
+                <span class="id-chip">PP / 26</span>
+              </div>
+
+            </div>
+
+            <!-- Back -->
+            <div class="id-card-face id-card-back">
+
+              <div class="id-card-header">
+                <span>PROFILE DETAILS</span>
+                <span>PROFILE / 02</span>
+              </div>
+
+              <div class="back-content">
+                <span class="id-label">TECHNICAL INTERESTS</span>
+
+                <div class="technology-list">
+                  @for (technology of profile.technologies; track technology) {
+                    <span>{{ technology }}</span>
+                  }
+                </div>
+
+                <div class="back-divider"></div>
+
+                <span class="id-label">CURRENT CHAPTER</span>
+                <h3>{{ profile.university }}</h3>
+                <p>{{ profile.experience }}</p>
+              </div>
+
+              <div class="id-card-footer">
+                <span>BUILDING. LEARNING. IMPROVING.</span>
+                <span class="id-chip">PP / 26</span>
+              </div>
+
+            </div>
+
+          </div>
+        </button>
+
+        <p class="card-hint">
+          <span>↻</span>
+          Click the card to reveal more
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>

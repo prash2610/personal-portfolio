@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* =========================================
+   PRASHANT POTE — PERSONAL PORTFOLIO
+   Global Design System
+========================================= */
+
+:root {
+  /* Colors */
+  --color-paper: #F4F2EE;
+  --color-white: #FFFFFF;
+  --color-ink: #171717;
+  --color-muted: #777777;
+  --color-border: #E5E3DF;
+
+  /* Typography */
+  --font-primary: Arial, Helvetica, sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --section-spacing: clamp(96px, 14vh, 160px);
+
+  /* Components */
+  --radius-card: 24px;
+  --radius-button: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Reusable layout */
+
+.container {
+  width: min(100% - 48px, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-spacing);
+}
+
+/* Selection */
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 32px, var(--container-width));
+  }
+}

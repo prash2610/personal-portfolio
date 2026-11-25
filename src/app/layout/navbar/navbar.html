@@ -1,0 +1,110 @@
+
+<!-- Scroll Progress -->
+<div
+  class="scroll-progress"
+  [style.width.%]="scrollProgress()">
+</div>
+
+<!-- Navbar -->
+<header
+  class="navbar"
+  [class.scrolled]="isScrolled()">
+
+  <div class="navbar-container">
+
+    <!-- Brand -->
+    <a
+      href="#home"
+      class="brand"
+      (click)="closeMenu()">
+
+      <div class="brand-logo">
+        PP
+      </div>
+
+      <span class="brand-name">
+        Prashant Pote
+      </span>
+
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+
+      @for (link of navLinks; track link.id) {
+        <a
+          [href]="'#' + link.id"
+          class="nav-link">
+
+          {{ link.label }}
+
+        </a>
+      }
+
+      <a
+        href="#contact"
+        class="nav-cta">
+
+        Let's Talk
+        <span>↗</span>
+
+      </a>
+
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="mobile-menu-button"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Toggle navigation menu">
+
+      <span>{{ isMenuOpen() ? 'Close' : 'Menu' }}</span>
+
+      <span class="menu-icon">
+        {{ isMenuOpen() ? '×' : '+' }}
+      </span>
+
+    </button>
+
+  </div>
+
+</header>
+
+<!-- Mobile Navigation -->
+@if (isMenuOpen()) {
+
+  <div class="mobile-nav">
+
+    <span class="mobile-nav-label">
+      NAVIGATION
+    </span>
+
+    @for (link of navLinks; track link.id; let i = $index) {
+
+      <a
+        [href]="'#' + link.id"
+        class="mobile-nav-link"
+        (click)="closeMenu()">
+
+        <span class="mobile-nav-number">
+          0{{ i + 1 }}
+        </span>
+
+        <span>{{ link.label }}</span>
+
+        <span class="mobile-nav-arrow">↗</span>
+
+      </a>
+
+    }
+
+    <div class="mobile-nav-footer">
+      <span>Prashant Pote</span>
+      <span>Software Engineer</span>
+    </div>
+
+  </div>
+
+}

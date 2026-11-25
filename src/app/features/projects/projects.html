@@ -1,0 +1,135 @@
+
+<section class="projects-section section" id="work">
+  <div class="container">
+
+    <div class="projects-heading">
+      <div>
+        <span class="section-eyebrow">03 / SELECTED WORK</span>
+        <h2>
+          Projects I've
+          <span>worked on.</span>
+        </h2>
+      </div>
+
+      <p class="projects-intro">
+        A selection of projects that reflect my experience
+        in software development, application engineering
+        and exploring new technologies.
+      </p>
+    </div>
+
+    <div class="projects-list">
+
+      @for (project of projects; track project.number) {
+        <article class="project-card">
+
+          <div class="project-visual" [class.currency-visual]="project.visual === 'currency'"
+               [class.pharma-visual]="project.visual === 'pharma'">
+
+            <div class="visual-top">
+              <span>PROJECT / {{ project.number }}</span>
+              <span>{{ project.period }}</span>
+            </div>
+
+            @if (project.visual === 'currency') {
+              <div class="currency-preview">
+                <div class="preview-heading">
+                  <span>Currency exchange</span>
+                  <span class="preview-status">LIVE PROJECT</span>
+                </div>
+
+                <div class="currency-value">
+                  <div>
+                    <span>FROM</span>
+                    <strong>100.00 <small>EUR</small></strong>
+                  </div>
+                  <span class="exchange-icon">↔</span>
+                  <div>
+                    <span>TO</span>
+                    <strong>— <small>USD</small></strong>
+                  </div>
+                </div>
+
+                <div class="preview-footer">
+                  <span>Real-time exchange rate integration</span>
+                  <span>↗</span>
+                </div>
+              </div>
+            }
+
+            @if (project.visual === 'pharma') {
+              <div class="pharma-preview">
+                <div class="pharma-symbol">P<span>+</span></div>
+                <div class="pharma-text">
+                  <span>PHARMACEUTICAL TECHNOLOGY</span>
+                  <strong>PharmaSort</strong>
+                  <small>Mobile application · Demand forecasting</small>
+                </div>
+                <div class="pharma-decoration">✳</div>
+              </div>
+            }
+
+            <div class="visual-bottom">
+              <span>{{ project.category }}</span>
+              <span>{{ project.number }} / 02</span>
+            </div>
+
+          </div>
+
+          <div class="project-info">
+
+            <div class="project-title-row">
+              <span class="project-number">{{ project.number }}</span>
+              <h3>{{ project.name }}</h3>
+            </div>
+
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+
+            <div class="project-technologies">
+              @for (technology of project.technologies; track technology) {
+                <span>{{ technology }}</span>
+              }
+            </div>
+
+            <div class="project-links">
+              @if (project.liveUrl) {
+                <a
+                  [href]="project.liveUrl"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  {{ project.liveLabel }} <span>↗</span>
+                </a>
+              }
+
+              @if (project.githubUrl) {
+                <a
+                  [href]="project.githubUrl"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  GitHub <span>↗</span>
+                </a>
+              }
+
+              @if (!project.liveUrl && !project.githubUrl) {
+                <span class="project-note">
+                  Academic project
+                </span>
+              }
+            </div>
+
+          </div>
+
+        </article>
+      }
+
+    </div>
+
+    <div class="projects-footer">
+      <span>MORE PROJECTS COMING SOON</span>
+      <span>↘</span>
+    </div>
+
+  </div>
+</section>

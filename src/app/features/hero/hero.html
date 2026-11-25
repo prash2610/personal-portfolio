@@ -1,0 +1,133 @@
+
+<section class="hero-section" id="home">
+
+  <div class="hero-container">
+
+    <!-- Left: Introduction -->
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span>HELLO, I'M PRASHANT</span>
+      </div>
+
+      <h1 class="hero-title">
+        Software Engineer
+        <span class="title-highlight">
+          building for
+          <span class="title-italic">the future.</span>
+        </span>
+      </h1>
+
+      <p class="hero-description">
+        {{ profile.introduction }}
+      </p>
+
+      <p class="hero-details">
+        {{ profile.description }}
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="hero-actions">
+
+        <a
+          class="primary-button"
+          [href]="profile.resumePath"
+          download="Prashant_Pote_Resume.pdf">
+
+          Download Resume
+          <span>↓</span>
+
+        </a>
+
+        <a
+          class="secondary-button"
+          href="#work">
+
+          Explore My Work
+          <span>↗</span>
+
+        </a>
+
+      </div>
+
+      <!-- Location -->
+      <div class="hero-location">
+
+        <span class="location-dot"></span>
+
+        <span>{{ profile.location }}</span>
+
+      </div>
+
+    </div>
+
+    <!-- Right: Visual Composition -->
+    <div class="hero-visual">
+
+      <div class="visual-background-circle"></div>
+
+      <div class="visual-card">
+
+        <div class="visual-card-top">
+          <span>PERSONAL PROFILE</span>
+          <span>01 / 01</span>
+        </div>
+
+        <div class="visual-portrait">
+
+          <div class="portrait-placeholder">
+            <span>PP</span>
+          </div>
+
+          <div class="portrait-caption">
+            <span>SOFTWARE ENGINEER</span>
+            <span>COMPUTER SCIENCE</span>
+          </div>
+
+        </div>
+
+        <div class="visual-card-bottom">
+
+          <div>
+            <span class="card-label">CURRENTLY</span>
+            <strong>M.Sc. Computer Science</strong>
+          </div>
+
+          <span class="card-arrow">↗</span>
+
+        </div>
+
+      </div>
+
+      <!-- Floating Information -->
+      <div class="floating-tag tag-top">
+        <span class="tag-icon">✳</span>
+        <span>Problem Solver</span>
+      </div>
+
+      <div class="floating-tag tag-bottom">
+        <span class="tag-icon">⌘</span>
+        <span>Software Development</span>
+      </div>
+
+      <span class="visual-decoration decoration-one"></span>
+      <span class="visual-decoration decoration-two"></span>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Information -->
+  <div class="hero-bottom">
+
+    <span>PORTFOLIO · 2026</span>
+
+    <a href="#about">
+      SCROLL TO EXPLORE
+      <span>↓</span>
+    </a>
+
+  </div>
+
+</section>

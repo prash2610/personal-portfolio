@@ -1,0 +1,53 @@
+
+<section class="skills-section section" id="skills">
+  <div class="container">
+
+    <div class="skills-heading">
+      <div>
+        <span class="section-eyebrow">02 / MY EXPERTISE</span>
+        <h2>
+          Skills &amp;
+          <span>technologies.</span>
+        </h2>
+      </div>
+
+      <p class="skills-intro">
+        Technologies and tools I've worked with through
+        professional experience, academic learning and
+        personal projects.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      @for (group of skillGroups; track group.number) {
+        <article class="skill-card">
+
+          <div class="skill-card-header">
+            <span class="skill-number">{{ group.number }}</span>
+            <span class="skill-arrow">↗</span>
+          </div>
+
+          <h3>{{ group.title }}</h3>
+
+          <p class="skill-description">
+            {{ group.description }}
+          </p>
+
+          <div class="skill-tags">
+            @for (skill of group.skills; track skill) {
+              <span class="skill-tag">{{ skill }}</span>
+            }
+          </div>
+
+        </article>
+      }
+    </div>
+
+    <div class="skills-footer">
+      <span class="footer-line"></span>
+      <p>ALWAYS LEARNING. ALWAYS BUILDING.</p>
+      <span class="footer-line"></span>
+    </div>
+
+  </div>
+</section>
